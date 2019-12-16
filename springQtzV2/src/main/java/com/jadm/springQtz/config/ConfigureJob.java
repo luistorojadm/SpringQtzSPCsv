@@ -6,7 +6,7 @@ import org.quartz.JobDetail;
 
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
-
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,6 +19,9 @@ import com.jadm.springQtz.Jobs.JobC;
 
 @Configuration
 public class ConfigureJob {
+	
+	@Value("${cron.expression}")
+    private String CronConfig;
 	
 	
 	@Bean
@@ -33,11 +36,11 @@ public class ConfigureJob {
         return TriggerBuilder.newTrigger().forJob(jobADetails)
 
                 .withIdentity("sampleTriggerA")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * * ? * * *"))
+                .withSchedule(CronScheduleBuilder.cronSchedule(CronConfig))
                 .build();
     }
-	
-	
+ 
+    /*
 	@Bean
     public JobDetail jobCDetails() {
         return JobBuilder.newJob(JobC.class).withIdentity("sampleJobC")
@@ -50,12 +53,12 @@ public class ConfigureJob {
         return TriggerBuilder.newTrigger().forJob(jobCDetails)
 
                 .withIdentity("sampleTriggerC")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/15 * * ? * * *"))
+                .withSchedule(CronScheduleBuilder.cronSchedule(CronConfig))
                 //.forJob(sampleJobA)
                 .build();
     }
 	
-   
+    /*  
    
 public class ConfigureBJob{
 	
@@ -77,7 +80,7 @@ public class ConfigureBJob{
     }
     
 }
-/*
+
     @Bean
     public JobDetail jobSp2Details() {
         return JobBuilder.newJob(JobSp2.class).withIdentity("sampleJobC")

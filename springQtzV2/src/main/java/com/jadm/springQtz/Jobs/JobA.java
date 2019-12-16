@@ -18,6 +18,8 @@ import org.slf4j.LoggerFactory;
 import com.jadm.springQtz.repository.ProcedureInvoker;
 import com.jadm.springQtz.service.ServiceA;
 import com.jadm.springQtz.service.ServiceDate;
+import com.jadm.springQtz.service.ServiceGeneratedCsv;
+import com.jadm.springQtz.service.ServiceUpdateGestor;
 import com.jadm.springQtz.service.SesionesAppex;
 
 
@@ -25,6 +27,8 @@ import com.jadm.springQtz.service.SesionesAppex;
 public class JobA implements Job {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(JobA.class);
+	
+	
 
     @Autowired
     private ServiceA serviceA;  
@@ -38,33 +42,57 @@ public class JobA implements Job {
     @Autowired
     private ProcedureInvoker procedureInvoker;
     
+    @Autowired
+    private ServiceGeneratedCsv serviceGeneratedCsv;
+    
+    @Autowired
+	private ServiceUpdateGestor serviceUpdateGestor;
     
     
+    Long Id = ServiceA.IdGestor;
+	String nameCsv = ServiceGeneratedCsv.nameCsv;
+	
+	private Date fechaFinProceso= new Date();   
+   
   
     @Override
     public void execute(JobExecutionContext context ) throws JobExecutionException {
        
     	
-    	Date fechaSolicitud = serviceDate.getDate();
-        long Id = serviceA.GenerateIDGestor(fechaSolicitud);
+    	Date fechaSolicitud = serviceDate.getDate(); //Fecha se inserta Junto al ID
+        
+    	long Id = serviceA.GenerateIDGestor(fechaSolicitud); //Inserta Nuevo Registro en el Gestor
     	
     	LOG.info("Obtiene el Id para gestor :" + Id);
     	  	
     	
-    	BigDecimal in_session_number = sesionesAppex.getNextSesionId(); 
+    	BigDecimal in_session_number = sesionesAppex.getNextSesionId(); // Parametro de Entrada in_session_number Para el Sp GenExlc 
     	
     	LOG.info("Obtiene el session_number :" + in_session_number);
     	
-    	String in_fecha =serviceDate.getStringDate();
+    	String in_fecha =serviceDate.getStringDate(); //Parametro de Entrada in_session_number Para el Sp GenExlc
     	
     	LOG.info("Obtiene fecha actual :" + in_fecha);
     	
-    	System.out.println("Fecha   " + in_fecha );
     	
     	//procedureInvoker.CallSp(in_session_number, "in_fecha");   	
+    	
+    	
+    	//Validacion Salida SP
+    	//final String var_out ="OK" ;
+    	
+    		//if(var_out =="OK") {
+    	
+    	serviceGeneratedCsv.writeCsv(); // Genera Archivo Csv
+    	       	   	
+       	serviceUpdateGestor.updateGestor(Id, fechaFinProceso, nameCsv); //Actualiza Gestor
+       	
+       		
+       		System.out.println("Actualiza Generador");
+    	   
+    			
+    		//}LOG.error("El Sp GenExlc No fue Exitoso");
         
-        
-        System.out.println("I am scheduled on " + new Date(System.currentTimeMillis()));
     }
     
 }

@@ -4,6 +4,7 @@
 package com.jadm.springQtz.service;
 
 
+import java.io.File;
 import java.io.FileWriter; 
 import java.io.Writer; 
 import java.nio.*; 
@@ -14,6 +15,7 @@ import java.util.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.jadm.springQtz.Jobs.JobC;
@@ -40,12 +42,18 @@ public class ServiceGeneratedCsv {
 	
 	private static ServiceDate serviceDate;
 	
-	//public static String rutaCsv = (AppConstants.RUTA_CSV);
+	//@Value("${rutaDescarga.csv}")
+    //private static String rutaProperties;
+	
+	//public static final File ruta = new File(rutaProperties);
+	
+	//private static final String rutaString = ruta.toString();
+	
+	//public static String nameCsv =(rutaString.concat("\\GeExcl").concat(fachaActual).concat(".csv"));
 	
 	public static  String fachaActual = serviceDate.getStringDate();
 	
-	public static String nameCsv = (AppConstants.RUTA_CSV.concat("GeExcl").concat(fachaActual).concat(".csv"));
-	
+	public static String nameCsv =(AppConstants.RUTA_CSV.concat(("\\GeExcl").concat(fachaActual).concat(".csv")));
 	
 	public void writeCsv(){
 		
@@ -56,9 +64,11 @@ public class ServiceGeneratedCsv {
 		    HeaderColumnNameMappingStrategy<ApexArchExcl> strategy = new HeaderColumnNameMappingStrategy<>();
 		      strategy.setType(ApexArchExcl.class);
 
-		    // create a csv writer
+		    char separator = ';';
+			// create a csv writer
 		    StatefulBeanToCsv<ApexArchExcl> csvWriter = new StatefulBeanToCsvBuilder<ApexArchExcl>(writer)
-		            .withSeparator(CSVWriter.DEFAULT_SEPARATOR)
+		    		.withSeparator(separator )
+		            //.withSeparator(CSVWriter.DEFAULT_SEPARATOR =';')
 		            .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
 		            .withEscapechar(CSVWriter.DEFAULT_ESCAPE_CHARACTER)
 		            .withLineEnd(CSVWriter.DEFAULT_LINE_END)
