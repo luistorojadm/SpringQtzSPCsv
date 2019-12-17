@@ -42,14 +42,8 @@ public class ServiceGeneratedCsv {
 	
 	private static ServiceDate serviceDate;
 	
-	//@Value("${rutaDescarga.csv}")
-    //private static String rutaProperties;
-	
-	//public static final File ruta = new File(rutaProperties);
-	
-	//private static final String rutaString = ruta.toString();
-	
-	//public static String nameCsv =(rutaString.concat("\\GeExcl").concat(fachaActual).concat(".csv"));
+	@Value("${ruta.propertis}")
+    String rutaProperties;
 	
 	public static  String fachaActual = serviceDate.getStringDate();
 	
@@ -59,7 +53,8 @@ public class ServiceGeneratedCsv {
 		
 		try {
 			// create a write
-		    Writer writer = Files.newBufferedWriter(Paths.get(nameCsv));
+			Writer writer = Files.newBufferedWriter(Paths.get(nameCsv));
+		
 		    
 		    HeaderColumnNameMappingStrategy<ApexArchExcl> strategy = new HeaderColumnNameMappingStrategy<>();
 		      strategy.setType(ApexArchExcl.class);
@@ -78,7 +73,7 @@ public class ServiceGeneratedCsv {
 		    
 		    
 
-		    // create a list of objects (`User`)
+		    // create a list of objects
 		    List<ApexArchExcl> apexArchExclList = serviceListArchExcl.listAll();
 		    
 
@@ -88,7 +83,7 @@ public class ServiceGeneratedCsv {
 		    // close the writer
 		    writer.close();
 		    
-		    LOG.info("Creacion de Archivo .CSV  ");
+		    LOG.info("Ruta PASADA POR PROPERTI " + rutaProperties);
 
 		} catch (Exception ex) {
 		    ex.printStackTrace();

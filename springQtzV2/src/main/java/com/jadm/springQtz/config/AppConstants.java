@@ -57,7 +57,7 @@ public class AppConstants {
     
     //ServiceGEneraCsv
     
-    public static final String RUTA_CSV = "C:\\csv";
+    public static final String RUTA_CSV = "..\\springQtzV2\\src\\main\\resources\\csv";
 
     // Usuario
     public static final String PREFIJO_ROL_USUARIOS_SOLO_BD = "ROLE_";
