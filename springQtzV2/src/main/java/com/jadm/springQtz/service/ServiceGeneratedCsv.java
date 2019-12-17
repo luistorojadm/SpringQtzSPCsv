@@ -45,6 +45,9 @@ public class ServiceGeneratedCsv {
 	@Value("${ruta.propertis}")
     String rutaProperties;
 	
+	@Value("${cvs.separator}")
+    char separator;
+	
 	public static  String fachaActual = serviceDate.getStringDate();
 	
 	public static String nameCsv =(AppConstants.RUTA_CSV.concat(("\\GeExcl").concat(fachaActual).concat(".csv")));
@@ -59,7 +62,7 @@ public class ServiceGeneratedCsv {
 		    HeaderColumnNameMappingStrategy<ApexArchExcl> strategy = new HeaderColumnNameMappingStrategy<>();
 		      strategy.setType(ApexArchExcl.class);
 
-		    char separator = ';';
+		    //char separator = ';';
 			// create a csv writer
 		    StatefulBeanToCsv<ApexArchExcl> csvWriter = new StatefulBeanToCsvBuilder<ApexArchExcl>(writer)
 		    		.withSeparator(separator )
