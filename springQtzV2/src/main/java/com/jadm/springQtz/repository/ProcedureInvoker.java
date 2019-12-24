@@ -19,6 +19,8 @@ public class ProcedureInvoker {
         this.entityManager = entityManager;
     }
 	    
+    	public static Long outputval;
+    	
 	    public void CallSp(BigDecimal in_session_number, String in_fecha) {
 	 
 	    
@@ -40,6 +42,7 @@ public class ProcedureInvoker {
 	        final Long outputValue1 = (Long) storedProcedureQuery.getOutputParameterValue("var_out");
 	        
 	        System.out.println( outputValue1);
+	        outputval = outputValue1;
 	    }
 }
 

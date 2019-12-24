@@ -79,20 +79,22 @@ public class JobA implements Job {
     	
     	
     	//Validacion Salida SP
-    	//final String var_out ="OK" ;
     	
-    		//if(var_out =="OK") {
+    	long StatusSp=  procedureInvoker.outputval;
+    	
+    	LOG.info("Satatus SP: " + StatusSp);
+    	
+    	 //if(StatusSp ==0) {
     	
     	serviceGeneratedCsv.writeCsv(); // Genera Archivo Csv
     	       	   	
        	serviceUpdateGestor.updateGestor(Id, fechaFinProceso, nameCsv); //Actualiza Gestor
-       	
-       		
-       		System.out.println("Actualiza Generador");
     	   
-    			
+       	LOG.info("Actualiza Gestor");
+    	 //}
+    //else {
     		//}LOG.error("El Sp GenExlc No fue Exitoso");
-        
-    }
-    
+       	
+    //}
+  }
 }
