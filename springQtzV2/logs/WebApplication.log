@@ -1,0 +1,146 @@
+2019-12-24 11:32:48.689  INFO 6228 --- [main] com.jadm.springQtz.SpringQtzApplication  : Starting SpringQtzApplication on DESKTOP-8TH12GD with PID 6228 (C:\Users\ivega\Desktop\GitHubRepo\springQtzV2\target\classes started by ivega in C:\Users\ivega\Desktop\GitHubRepo\springQtzV2)
+2019-12-24 11:32:48.694  INFO 6228 --- [main] com.jadm.springQtz.SpringQtzApplication  : No active profile set, falling back to default profiles: default
+2019-12-24 11:32:49.429  INFO 6228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-24 11:32:49.495  INFO 6228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 2 repository interfaces.
+2019-12-24 11:32:49.872  INFO 6228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-24 11:32:50.128  INFO 6228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-24 11:32:50.137  INFO 6228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 11:32:50.138  INFO 6228 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-24 11:32:50.246  INFO 6228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-24 11:32:50.246  INFO 6228 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1499 ms
+2019-12-24 11:32:50.422  INFO 6228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-24 11:32:51.084  INFO 6228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-24 11:32:51.226  INFO 6228 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-24 11:32:51.307  INFO 6228 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-24 11:32:51.471  INFO 6228 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-24 11:32:51.611  INFO 6228 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2019-12-24 11:32:51.617  WARN 6228 --- [main] org.hibernate.dialect.Oracle9Dialect     : HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-12-24 11:32:51.619  WARN 6228 --- [main] org.hibernate.dialect.OracleDialect      : HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2019-12-24 11:32:52.911  INFO 6228 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-24 11:32:52.920  INFO 6228 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-24 11:32:53.398  WARN 6228 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-24 11:32:53.592  INFO 6228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 11:32:53.849  INFO 6228 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-12-24 11:32:53.862  INFO 6228 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-12-24 11:32:53.863  INFO 6228 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2019-12-24 11:32:53.864  INFO 6228 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-12-24 11:32:53.865  INFO 6228 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-12-24 11:32:53.865  INFO 6228 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-12-24 11:32:53.865  INFO 6228 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2019-12-24 11:32:53.865  INFO 6228 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@597a7afa
+2019-12-24 11:32:53.978  INFO 6228 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d90868af-1f95-4f5b-aa08-4403bb312f8d
+
+2019-12-24 11:32:54.122  INFO 6228 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50ff7063, org.springframework.security.web.context.SecurityContextPersistenceFilter@18715bb, org.springframework.security.web.header.HeaderWriterFilter@5fb07347, org.springframework.security.web.csrf.CsrfFilter@1930a804, org.springframework.security.web.authentication.logout.LogoutFilter@71f0806b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14b5752f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@27896d3b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@67a8bcbb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@acb5508, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b7774d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1999149e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bb96449, org.springframework.security.web.session.SessionManagementFilter@49190ed6, org.springframework.security.web.access.ExceptionTranslationFilter@4276ad40, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d1c52f5]
+2019-12-24 11:32:54.193  INFO 6228 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-12-24 11:32:54.193  INFO 6228 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-12-24 11:32:54.229  INFO 6228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-24 11:32:54.232  INFO 6228 --- [main] com.jadm.springQtz.SpringQtzApplication  : Started SpringQtzApplication in 6.089 seconds (JVM running for 6.956)
+2019-12-24 11:33:00.221 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select hibernate_sequence.nextval from dual
+2019-12-24 11:33:00.293 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : insert into appex_arch_gestor (codigo_accion, codigo_modulo_origen, estado, fecha_fin_proceso, fecha_solicitud, query_consulta_web, ruta_archivo, usuario, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2019-12-24 11:33:00.328  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.service.ServiceA      : Creado por el servicioA50
+2019-12-24 11:33:00.329  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Obtiene el Id para gestor :50
+2019-12-24 11:33:00.407 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : SELECT APP_SAM.SESIONES_APPEX.NEXTVAL FROM DUAL
+2019-12-24 11:33:00.420  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Obtiene el session_number :7
+2019-12-24 11:33:00.422  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Obtiene fecha actual :24-12-2019
+2019-12-24 11:33:00.459 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : {call APPEX_PKG_GEN_EXCL.appex_carga_excl(?,?,?)}
+2019-12-24 11:33:00.497  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Satatus SP: 1
+2019-12-24 11:33:00.834 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select apexarchex0_.session_number as session_1_0_, apexarchex0_.atr_code_ciclo as atr_code2_0_, apexarchex0_.atr_code_marca as atr_code3_0_, apexarchex0_.atr_code_temco as atr_code4_0_, apexarchex0_.atr_code_temcp as atr_code5_0_, apexarchex0_.atr_code_temp as atr_code6_0_, apexarchex0_.atr_desc_ciclo as atr_desc7_0_, apexarchex0_.atr_desc_marca as atr_desc8_0_, apexarchex0_.atr_desc_temco as atr_desc9_0_, apexarchex0_.atr_desc_temcp as atr_des10_0_, apexarchex0_.atr_desc_temp as atr_des11_0_, apexarchex0_.case_pack_id as case_pa12_0_, apexarchex0_.motivo as motivo13_0_, apexarchex0_.on_hand_qty as on_hand14_0_, apexarchex0_.order_amt as order_a15_0_, apexarchex0_.org_name_full as org_nam16_0_, apexarchex0_.pmh_warehouse as pmh_war17_0_, apexarchex0_.po_order_qty as po_orde18_0_, apexarchex0_.prd_lvl_number as prd_lvl19_0_, apexarchex0_.prd_name_clase as prd_nam20_0_, apexarchex0_.prd_name_full as prd_nam21_0_, apexarchex0_.prd_name_rubro as prd_nam22_0_, apexarchex0_.prd_name_subrubro as prd_nam23_0_, apexarchex0_.rpl_dist_method as rpl_dis24_0_, apexarchex0_.rpl_fc_wkly_sls as rpl_fc_25_0_, apexarchex0_.stock_total as stock_t26_0_, apexarchex0_.to_intrn_qty as to_intr27_0_, apexarchex0_.to_ord_qty as to_ord_28_0_ from appex_arch_excl apexarchex0_
+2019-12-24 11:33:00.909  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobC             : Ruta por properties "..\springQtzV2\src\main\resources\csv"
+2019-12-24 11:33:00.909  INFO 6228 --- [quartzScheduler_Worker-1] c.j.s.service.ServiceUpdateGestor        : Obtiene por Constructor para UpdateGestorr :50
+2019-12-24 11:33:00.915 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select gestor0_.id as id1_1_0_, gestor0_.codigo_accion as codigo_a2_1_0_, gestor0_.codigo_modulo_origen as codigo_m3_1_0_, gestor0_.estado as estado4_1_0_, gestor0_.fecha_fin_proceso as fecha_fi5_1_0_, gestor0_.fecha_solicitud as fecha_so6_1_0_, gestor0_.query_consulta_web as query_co7_1_0_, gestor0_.ruta_archivo as ruta_arc8_1_0_, gestor0_.usuario as usuario9_1_0_ from appex_arch_gestor gestor0_ where gestor0_.id=?
+2019-12-24 11:33:00.950 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select gestor0_.id as id1_1_0_, gestor0_.codigo_accion as codigo_a2_1_0_, gestor0_.codigo_modulo_origen as codigo_m3_1_0_, gestor0_.estado as estado4_1_0_, gestor0_.fecha_fin_proceso as fecha_fi5_1_0_, gestor0_.fecha_solicitud as fecha_so6_1_0_, gestor0_.query_consulta_web as query_co7_1_0_, gestor0_.ruta_archivo as ruta_arc8_1_0_, gestor0_.usuario as usuario9_1_0_ from appex_arch_gestor gestor0_ where gestor0_.id=?
+2019-12-24 11:33:00.963 DEBUG 6228 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : update appex_arch_gestor set codigo_accion=?, codigo_modulo_origen=?, estado=?, fecha_fin_proceso=?, fecha_solicitud=?, query_consulta_web=?, ruta_archivo=?, usuario=? where id=?
+2019-12-24 11:33:00.988  INFO 6228 --- [quartzScheduler_Worker-1] c.j.s.service.ServiceUpdateGestor        : Actualizacion Completada: 50
+2019-12-24 11:33:00.989  INFO 6228 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Actualiza Gestor
+2019-12-24 11:33:04.644  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-24 11:33:04.647  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-12-24 11:33:04.648  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-12-24 11:33:04.648  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-12-24 11:33:04.648  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-12-24 11:33:04.649  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-12-24 11:33:04.650  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-24 11:33:04.651  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-24 11:33:04.654  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-24 11:33:04.798  INFO 6228 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-24 11:37:01.710  INFO 2864 --- [main] com.jadm.springQtz.SpringQtzApplication  : Starting SpringQtzApplication on DESKTOP-8TH12GD with PID 2864 (C:\Users\ivega\Desktop\GitHubRepo\springQtzV2\target\classes started by ivega in C:\Users\ivega\Desktop\GitHubRepo\springQtzV2)
+2019-12-24 11:37:01.713  INFO 2864 --- [main] com.jadm.springQtz.SpringQtzApplication  : No active profile set, falling back to default profiles: default
+2019-12-24 11:37:02.690  INFO 2864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-24 11:37:02.875  INFO 2864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 169ms. Found 2 repository interfaces.
+2019-12-24 11:37:03.321  INFO 2864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-24 11:37:03.713  INFO 2864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-24 11:37:03.726  INFO 2864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-24 11:37:03.727  INFO 2864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-24 11:37:03.869  INFO 2864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-24 11:37:03.869  INFO 2864 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2074 ms
+2019-12-24 11:37:04.086  INFO 2864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-24 11:37:04.948  INFO 2864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-24 11:37:05.099  INFO 2864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-24 11:37:05.187  INFO 2864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-24 11:37:05.366  INFO 2864 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-24 11:37:05.539  INFO 2864 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.OracleDialect
+2019-12-24 11:37:05.546  WARN 2864 --- [main] org.hibernate.dialect.Oracle9Dialect     : HHH000063: The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-12-24 11:37:05.549  WARN 2864 --- [main] org.hibernate.dialect.OracleDialect      : HHH000064: The OracleDialect dialect has been deprecated; use Oracle8iDialect instead
+2019-12-24 11:37:06.948  INFO 2864 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-24 11:37:06.958  INFO 2864 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-24 11:37:07.414  WARN 2864 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-24 11:37:07.593  INFO 2864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-24 11:37:07.902  INFO 2864 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-12-24 11:37:07.916  INFO 2864 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-12-24 11:37:07.916  INFO 2864 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2019-12-24 11:37:07.917  INFO 2864 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-12-24 11:37:07.918  INFO 2864 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-12-24 11:37:07.918  INFO 2864 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-12-24 11:37:07.918  INFO 2864 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2019-12-24 11:37:07.918  INFO 2864 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@610fbe1c
+2019-12-24 11:37:08.045  INFO 2864 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b2910b0b-e2d2-483b-9e1d-c943e1d13a47
+
+2019-12-24 11:37:08.203  INFO 2864 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@721fc2e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@8432469, org.springframework.security.web.header.HeaderWriterFilter@3386c206, org.springframework.security.web.csrf.CsrfFilter@376af784, org.springframework.security.web.authentication.logout.LogoutFilter@c732e1c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e9a10cd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3a3ad8e7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@63187d63, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@45d7495e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15c16f19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a16984c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ccdc7aa, org.springframework.security.web.session.SessionManagementFilter@6dded900, org.springframework.security.web.access.ExceptionTranslationFilter@76a1146d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63a84bb6]
+2019-12-24 11:37:08.271  INFO 2864 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-12-24 11:37:08.271  INFO 2864 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-12-24 11:37:08.352  INFO 2864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-24 11:37:08.355  INFO 2864 --- [main] com.jadm.springQtz.SpringQtzApplication  : Started SpringQtzApplication in 7.079 seconds (JVM running for 7.987)
+2019-12-24 11:37:30.065 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select hibernate_sequence.nextval from dual
+2019-12-24 11:37:30.141 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : insert into appex_arch_gestor (codigo_accion, codigo_modulo_origen, estado, fecha_fin_proceso, fecha_solicitud, query_consulta_web, ruta_archivo, usuario, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2019-12-24 11:37:30.191  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.service.ServiceA      : Creado por el servicioA51
+2019-12-24 11:37:30.191  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Obtiene el Id para gestor :51
+2019-12-24 11:37:30.263 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : SELECT APP_SAM.SESIONES_APPEX.NEXTVAL FROM DUAL
+2019-12-24 11:37:30.281  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Obtiene el session_number :8
+2019-12-24 11:37:30.282  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Obtiene fecha actual :24-12-2019
+2019-12-24 11:37:30.326 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : {call APPEX_PKG_GEN_EXCL.appex_carga_excl(?,?,?)}
+2019-12-24 11:37:30.379  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Satatus SP: 1
+2019-12-24 11:37:30.726 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select apexarchex0_.session_number as session_1_0_, apexarchex0_.atr_code_ciclo as atr_code2_0_, apexarchex0_.atr_code_marca as atr_code3_0_, apexarchex0_.atr_code_temco as atr_code4_0_, apexarchex0_.atr_code_temcp as atr_code5_0_, apexarchex0_.atr_code_temp as atr_code6_0_, apexarchex0_.atr_desc_ciclo as atr_desc7_0_, apexarchex0_.atr_desc_marca as atr_desc8_0_, apexarchex0_.atr_desc_temco as atr_desc9_0_, apexarchex0_.atr_desc_temcp as atr_des10_0_, apexarchex0_.atr_desc_temp as atr_des11_0_, apexarchex0_.case_pack_id as case_pa12_0_, apexarchex0_.motivo as motivo13_0_, apexarchex0_.on_hand_qty as on_hand14_0_, apexarchex0_.order_amt as order_a15_0_, apexarchex0_.org_name_full as org_nam16_0_, apexarchex0_.pmh_warehouse as pmh_war17_0_, apexarchex0_.po_order_qty as po_orde18_0_, apexarchex0_.prd_lvl_number as prd_lvl19_0_, apexarchex0_.prd_name_clase as prd_nam20_0_, apexarchex0_.prd_name_full as prd_nam21_0_, apexarchex0_.prd_name_rubro as prd_nam22_0_, apexarchex0_.prd_name_subrubro as prd_nam23_0_, apexarchex0_.rpl_dist_method as rpl_dis24_0_, apexarchex0_.rpl_fc_wkly_sls as rpl_fc_25_0_, apexarchex0_.stock_total as stock_t26_0_, apexarchex0_.to_intrn_qty as to_intr27_0_, apexarchex0_.to_ord_qty as to_ord_28_0_ from appex_arch_excl apexarchex0_
+2019-12-24 11:37:30.812  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobC             : Ruta por properties "..\springQtzV2\src\main\resources\csv"
+2019-12-24 11:37:30.813  INFO 2864 --- [quartzScheduler_Worker-1] c.j.s.service.ServiceUpdateGestor        : Obtiene por Constructor para UpdateGestorr :51
+2019-12-24 11:37:30.819 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select gestor0_.id as id1_1_0_, gestor0_.codigo_accion as codigo_a2_1_0_, gestor0_.codigo_modulo_origen as codigo_m3_1_0_, gestor0_.estado as estado4_1_0_, gestor0_.fecha_fin_proceso as fecha_fi5_1_0_, gestor0_.fecha_solicitud as fecha_so6_1_0_, gestor0_.query_consulta_web as query_co7_1_0_, gestor0_.ruta_archivo as ruta_arc8_1_0_, gestor0_.usuario as usuario9_1_0_ from appex_arch_gestor gestor0_ where gestor0_.id=?
+2019-12-24 11:37:30.883 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : select gestor0_.id as id1_1_0_, gestor0_.codigo_accion as codigo_a2_1_0_, gestor0_.codigo_modulo_origen as codigo_m3_1_0_, gestor0_.estado as estado4_1_0_, gestor0_.fecha_fin_proceso as fecha_fi5_1_0_, gestor0_.fecha_solicitud as fecha_so6_1_0_, gestor0_.query_consulta_web as query_co7_1_0_, gestor0_.ruta_archivo as ruta_arc8_1_0_, gestor0_.usuario as usuario9_1_0_ from appex_arch_gestor gestor0_ where gestor0_.id=?
+2019-12-24 11:37:30.897 DEBUG 2864 --- [quartzScheduler_Worker-1] org.hibernate.SQL                        : update appex_arch_gestor set codigo_accion=?, codigo_modulo_origen=?, estado=?, fecha_fin_proceso=?, fecha_solicitud=?, query_consulta_web=?, ruta_archivo=?, usuario=? where id=?
+2019-12-24 11:37:30.926  INFO 2864 --- [quartzScheduler_Worker-1] c.j.s.service.ServiceUpdateGestor        : Actualizacion Completada: 51
+2019-12-24 11:37:30.926  INFO 2864 --- [quartzScheduler_Worker-1] com.jadm.springQtz.Jobs.JobA             : Actualiza Gestor
+2019-12-24 11:37:33.046  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-24 11:37:33.047  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-12-24 11:37:33.049  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-12-24 11:37:33.049  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-12-24 11:37:33.049  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-12-24 11:37:33.050  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-12-24 11:37:33.052  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-24 11:37:33.053  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-24 11:37:33.055  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-24 11:37:33.163  INFO 2864 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
