@@ -17,9 +17,9 @@ public class SesionesAppex {
 	
 	public BigDecimal getNextSesionId() {
 		
-		BigDecimal SesionId = new BigDecimal("5732"); //Solo Para Pruebas sin SP
+		//BigDecimal SesionId = new BigDecimal("5732"); //Solo Para Pruebas sin SP
 		
-		//BigDecimal SesionId = (BigDecimal) entityManager.createNativeQuery("SELECT APP_STAGE.SESIONES_APPEX.NEXTVAL FROM DUAL").getSingleResult();
+		BigDecimal SesionId = (BigDecimal) entityManager.createNativeQuery("SELECT APP_SAM.SESIONES_APPEX.NEXTVAL FROM DUAL").getSingleResult();
 		
 		return SesionId;
 		

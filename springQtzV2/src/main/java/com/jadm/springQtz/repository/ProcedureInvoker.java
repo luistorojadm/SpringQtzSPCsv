@@ -27,7 +27,7 @@ public class ProcedureInvoker {
 	        // Registrar los parámetros de entrada y salida
 	        storedProcedureQuery.registerStoredProcedureParameter("in_session_number", BigDecimal.class, ParameterMode.IN);
 	        storedProcedureQuery.registerStoredProcedureParameter("in_fecha", String.class, ParameterMode.IN);
-	        storedProcedureQuery.registerStoredProcedureParameter("var_out", String.class, ParameterMode.OUT);
+	        storedProcedureQuery.registerStoredProcedureParameter("var_out", Long.class, ParameterMode.OUT);
 	 
 	        // Configuramos el valor de entrada
 	        storedProcedureQuery.setParameter("in_session_number", in_session_number);
@@ -37,7 +37,7 @@ public class ProcedureInvoker {
 	        storedProcedureQuery.execute();
 	 
 	        // Obtenemos los valores de salida
-	        final String outputValue1 = (String) storedProcedureQuery.getOutputParameterValue("var_out");
+	        final Long outputValue1 = (Long) storedProcedureQuery.getOutputParameterValue("var_out");
 	        
 	        System.out.println( outputValue1);
 	    }

@@ -75,7 +75,7 @@ public class JobA implements Job {
     	LOG.info("Obtiene fecha actual :" + in_fecha);
     	
     	
-    	//procedureInvoker.CallSp(in_session_number, "in_fecha");   	
+    	procedureInvoker.CallSp(in_session_number, "in_fecha");   	
     	
     	
     	//Validacion Salida SP

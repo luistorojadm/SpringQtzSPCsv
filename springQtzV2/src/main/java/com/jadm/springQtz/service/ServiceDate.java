@@ -21,7 +21,7 @@ public class ServiceDate {
 	} 
 	
 	public static String getStringDate() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd_MM_yyyy_HH_mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		String fechaComoCadena = sdf.format(new Date());
 		return  fechaComoCadena;
 		

@@ -86,7 +86,7 @@ public class ServiceGeneratedCsv {
 		    // close the writer
 		    writer.close();
 		    
-		    LOG.info("Ruta PASADA POR PROPERTI " + rutaProperties);
+		    LOG.info("Ruta por properties " + rutaProperties);
 
 		} catch (Exception ex) {
 		    ex.printStackTrace();
