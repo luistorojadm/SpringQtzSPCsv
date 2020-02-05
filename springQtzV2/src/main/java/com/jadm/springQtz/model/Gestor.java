@@ -1,9 +1,7 @@
 package com.jadm.springQtz.model;
 
-import java.io.Serializable;
-import java.util.Date;
-
 import javax.persistence.*;
+import java.sql.Date;
 
 @Entity
 @Table(name="APPEX_ARCH_GESTOR")
@@ -38,7 +36,13 @@ public class Gestor {
     private Date fechaSolicitud;
 
     /**
-     * Ruta completa archivo a subir o descargar
+     * Nombre archivo resultante proceso (para descargar)
+     */
+    @Column(columnDefinition = "varchar2(128)")
+    private String nombreArchivo;
+
+    /**
+     * Ruta completa archivo resultante proceso (para descargar)
      */
     @Column(columnDefinition = "varchar2(255)")
     private String rutaArchivo;
@@ -73,6 +77,17 @@ public class Gestor {
      */
     @Column(columnDefinition = "varchar2(1024)")
     private String queryConsultaWeb;
+
+
+    /**
+     * Nombre archivo subida (carga usuario)
+     */
+    private String nombreArchivoSubida;
+
+    /**
+     * Ruta archivo subida (carga usuario)
+     */
+    private String rutaArchivoSubida;
 
     public Gestor(int codigoAccion, Date fechaFinProceso, Date fechaSolicitud, String rutaArchivo, int codigoModuloOrigen, int estado, String usuario, String queryConsultaWeb) {
         this.codigoAccion = codigoAccion;
@@ -119,6 +134,14 @@ public class Gestor {
         this.fechaSolicitud = fechaSolicitud;
     }
 
+    public String getNombreArchivo() {
+        return nombreArchivo;
+    }
+
+    public void setNombreArchivo(String nombreArchivo) {
+        this.nombreArchivo = nombreArchivo;
+    }
+
     public String getRutaArchivo() {
         return rutaArchivo;
     }
@@ -159,32 +182,65 @@ public class Gestor {
         this.queryConsultaWeb = queryConsultaWeb;
     }
 
+    public String getNombreArchivoSubida() {
+        return nombreArchivoSubida;
+    }
+
+    public void setNombreArchivoSubida(String nombreArchivoSubida) {
+        this.nombreArchivoSubida = nombreArchivoSubida;
+    }
+
+    public String getRutaArchivoSubida() {
+        return rutaArchivoSubida;
+    }
+
+    public void setRutaArchivoSubida(String rutaArchivoSubida) {
+        this.rutaArchivoSubida = rutaArchivoSubida;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Gestor:\n{")
-            .append("  gest_sequence='").append(id).append("'\n")
-            .append(", gest_action='").append(codigoAccion).append("'\n")
-            .append(", gest_date_processed='").append(fechaFinProceso).append("'\n")
-            .append(", gest_date_requested='").append(fechaSolicitud).append("'\n")
-            .append(", gest_filename='").append(rutaArchivo).append("'\n")
-            .append(", gest_source='").append(codigoModuloOrigen).append("'\n")
-            .append(", gest_status='").append(estado).append("'\n")
-            .append(", gest_user='").append(usuario).append("'\n")
-            .append(", gest_userquery='").append(queryConsultaWeb).append("'\n")
-            .append('}');
+
+        sb.append( "Gestor{")
+                .append("id=").append(id)
+                .append(", codigoAccion=").append(codigoAccion)
+                .append(", fechaFinProceso=")
+                    .append(fechaFinProceso).append("'\n")
+                .append(", fechaSolicitud=")
+                    .append(fechaSolicitud).append("'\n")
+                .append(", nombreArchivo='")
+                    .append(nombreArchivo)
+                .append(", rutaArchivo='")
+                    .append(rutaArchivo).append("'\n")
+                .append(", codigoModuloOrigen=")
+                    .append(codigoModuloOrigen).append("'\n")
+                .append(", estado=")
+                    .append(estado)
+                .append(", usuario='")
+                    .append(usuario).append("'\n")
+                .append(", queryConsultaWeb='")
+                    .append(queryConsultaWeb).append("'\n")
+                .append(", nombreArchivoSubida='")
+                    .append(nombreArchivoSubida).append("'\n")
+                .append(", rutaArchivoSubida='")
+                    .append(rutaArchivoSubida).append("'\n")
+                .append('}');
         return sb.toString();
-    } // fin toString()
+    }// fin toString()
 
     public static class GestorBuilder {
         private int accion;
         private Date fecha_proceso;
         private Date fecha_creacion;
         private String nombre_archivo;
+        private String ruta_archivo;
         private int origen_modulo;
         private int estado;
         private String usuario;
         private String query_usuario;
+        private String nombre_archivo_subida;
+        private String ruta_archivo_subida;
 
         public GestorBuilder accion(int val) {
             accion = val;
@@ -206,6 +262,11 @@ public class Gestor {
             return this;
         } // fin GestorBuilder nombre_archivo(String val)
 
+        public GestorBuilder ruta_archivo(String val) {
+            ruta_archivo = val;
+            return this;
+        } // fin GestorBuilder ruta_archivo(String val)
+
         public GestorBuilder origen_modulo(int val) {
             origen_modulo = val;
             return this;
@@ -226,6 +287,15 @@ public class Gestor {
             return this;
         } // fin GestorBuilder query_usuario(String val)
 
+        public GestorBuilder nombre_archivo_subida(String val) {
+            nombre_archivo_subida = val;
+            return this;
+        }
+        public GestorBuilder ruta_archivo_subida(String val) {
+            ruta_archivo_subida = val;
+            return this;
+        }
+
         public Gestor build() {
             return new Gestor(this);
         } // fin Gestor build()
@@ -235,11 +305,14 @@ public class Gestor {
         codigoAccion = builder.accion;
         fechaFinProceso = builder.fecha_proceso;
         fechaSolicitud = builder.fecha_creacion;
-        rutaArchivo = builder.nombre_archivo;
+        nombreArchivo = builder.nombre_archivo;
+        rutaArchivo = builder.ruta_archivo;
         codigoModuloOrigen = builder.origen_modulo;
         estado = builder.estado;
         usuario = builder.usuario;
         queryConsultaWeb = builder.query_usuario;
+        nombreArchivoSubida = builder.nombre_archivo_subida;
+        rutaArchivoSubida = builder.ruta_archivo_subida;
     } // fin Gestor(GestorBuilder builder)
 
 } // fin class Gestor

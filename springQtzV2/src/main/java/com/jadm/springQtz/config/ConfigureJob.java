@@ -12,8 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 import com.jadm.springQtz.Jobs.JobA;
-import com.jadm.springQtz.Jobs.JobB;
-import com.jadm.springQtz.Jobs.JobC;
+
 
 
 
